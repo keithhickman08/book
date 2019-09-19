@@ -4,22 +4,18 @@
 
 **Learning Objectives**
 
-* Get up and running with Julia Learn basic AWS API functionality in Julia Learn about REST services in Julia Interact
-* with external programs in Julia
+- Get up and running with Julia 
+- Learn basic AWS API functionality in Julia 
+- Learn about REST services in Julia 
+- Interact with external programs in Julia
 
 "Julia walks like Python and runs like C." [@www-julialang]
 
-Because Julia is a relatively new programming language and documentation is sparse, much of this chapter has been
-adapted from <https://julialang.org> [@www-julialang]
+Because Julia is a relatively new programming language and documentation is sparse, much of this chapter has been adapted from <https://julialang.org> [@www-julialang]
 
 ## Introduction
 
-Julia is a high-performance computing language designed by Alan Edelman, Jeff Bezanson, Stefan Karpinski, and Viral
-Shah. Released in 2012, Julia was aimed at the frustration of having to use multiple languages for various computing
-tasks; Matlab for linear algebra, R for statistics, Python for web development, etc. Karpinski and Shah teamed up with
-Bezanson to develop a high-level, human readable, all-purpose programming language that didn't require translation into
-lower languages like C or Java."Using LLVM, a compiler developed by University  of Illinois at Urbana-Champaign and
-enhanced by the likes of Apple and Google, Karpinski and company built the language so that it compiles straight to
+Julia is a high-performance computing language designed by Alan Edelman, Jeff Bezanson, Stefan Karpinski, and Viral Shah. Released in 2012, Julia was aimed at the frustration of having to use multiple languages for various computing tasks; Matlab for linear algebra, R for statistics, Python for web development, etc. Karpinski and Shah teamed up with Bezanson to develop a high-level, human readable, all-purpose programming language that didn't require translation into lower languages like C or Java."Using LLVM, a compiler developed by University  of Illinois at Urbana-Champaign and enhanced by the likes of Apple and Google, Karpinski and company built the language so that it compiles straight to
 machine code on the fly, as it runs" [@julia-wired].  Users will notice that the first time a piece of code runs in
 Julia, it takes some time to compile.  Subsequent runs are extremely efficient.
 

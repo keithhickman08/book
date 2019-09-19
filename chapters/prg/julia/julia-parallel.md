@@ -1,6 +1,6 @@
 # Parallel Computing
 
-Though not intended as a replacement for Hadoop, parallelism in Julia is fairly straight-forward [@julia-wired].
+Though not intended as a replacement for Hadoop, parallelism in Julia is fairly straight-forward. [@julia-wired].
 
 ## Coroutines or Tasks
 
@@ -89,6 +89,5 @@ This section is under development.
 
 ## Hadoop and Julia
 
-While development and interactivity between Spark, Hadoop, and Julia is also optimized for high performance computing in
-a distributed environment. While development and interactivity between Spark, Hadoop, and Julia is robust, the
+While development and interactivity between Spark, Hadoop, and Julia is robust, the
 documentation is limited. The Elly.jl package [@elly-jl] is a Hadoop and Yarn client for Julia.

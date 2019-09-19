@@ -3,8 +3,8 @@
 The basic structure for creating a GET REST function in Julia is as follows. This can be typed directly in the REPL: 
 
 ```julia
-using HTTP
-function make_API_call(url)
+julia> using HTTP
+julia> function make_API_call(url)
     try
         response = HTTP.get(url)
         return String(response.body)
@@ -13,8 +13,8 @@ function make_API_call(url)
     end
 end
 
-response = make_API_call("http://jsonplaceholder.typicode.com/users")
-println(response)
+julia> response = make_API_call("http://jsonplaceholder.typicode.com/users")
+julia> println(response)
 ```
 
 This example can be extended to include POST, PUT, and DELETE functions quickly. For more a robust web framework, we
@@ -49,7 +49,7 @@ with ```pwd()``` and changed with ```cd("path\\to\\files")```.  In the Atom edit
 named ```rest.jl```:
 
 ```julia
-#rest.jl
+# rest.jl
 julia> using Genie
 julia> import Genie.Router: route
 julia> import Genie.Renderer: json
@@ -121,7 +121,6 @@ julia> cd("directory-name")
 julia> using Genie
 julia> Genie.newapp("TestGenieApp")
 ```
-
 Verify the app was created by typing <https://127.0.0.1:8000> in a browser. The Genie welcome mat should appear. To shut
 down the server, type ```ctrl + c```.  To restart the app via the IDE REPL, type:
 
@@ -135,17 +134,15 @@ implementation, which will call a Julia library designed to split data into trai
 
 Adding routes and functionality can be done either via the REPL or by editing the ```routes.jl``` file directly.  For
 instance, the ```somefloats()``` function above could be added directly into the ```routes.jl``` file as in the above
-example.
-
-Additionally, we can add a ```lib``` directory into the root directory and include pre-written code or modules in the
-app.  In the following examples, Julia will be used to retrieve data from a website, then split that data into train and
-test sets.
+example. Additionally, we can add a ```lib``` directory into the root directory and include pre-written code or modules
+in the app.  In the following examples, Julia will be used to retrieve data from a website, then split that data into
+train and test sets.
 
 #### Getting, Shuffling, Splitting data: 
 
 Syntax in Julia for gathering and manipulating data is similar to that in Python. For the purposes of this text, we will
 download and process the well-known Iris dataset using the RDatasets package, then split the dataset into train and test
-sets.  For a complete list of the data available in Rdatasets, visit the following website: 
+sets.  For a complete list of the data available in Rdatasets, visit the following website:
 <https://github.com/JuliaStats/RDatasets.jl>.  To begin, bring the RDatasets into scope by adding the following lines of
 code to your ```routes.jl``` file.
 
@@ -233,6 +230,8 @@ end
 The entire routes.jl file should appear as follows: 
 
 ```julia
+#routes.jl
+
 using Genie.Router
 using RDatasets
 using myJuliaLib
