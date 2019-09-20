@@ -81,13 +81,13 @@ julia> s3_create_bucket(aws, "<bucket.name>")
 julia> s3_enable_versioning(aws, "<bucket.name>")
 ```
 
-#### Listing buckets and Objects
+**Listing buckets and Objects**
 
 Now we can run our script and verify that the bucket was created (see running Julia script above). We will further
 develop this script to include docopts to make managing S3 buckets and objects much easier. To expand on the previous
 example, add in the ```s3_list_buckets(credentials)``` or ```list_objects(credentials, bucket)``` functions.
 
-#### Adding objects to existing bucket
+**Adding objects to existing bucket**
 
 ```julia
 julia> s3_put(aws, "<bucket.name>", "key", "Hello!")
